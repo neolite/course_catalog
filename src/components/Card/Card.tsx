@@ -10,14 +10,21 @@ export function Card({ course }: CardProps) {
   const { title, category, price, author, image } = course;
   const badgeColorClass = categoryColors[category];
 
+  // Generate srcset for retina displays
+  const basePath = image.replace('.png', '');
+  const srcSet = `${basePath}.png 1x, ${basePath}-2x.png 2x, ${basePath}-3x.png 3x`;
+
   return (
     <article className="card">
       <div className="card__image-wrapper">
-        <img 
-          src={image} 
-          alt={title} 
+        <img
+          src={image}
+          srcSet={srcSet}
+          alt={title}
           className="card__image"
           loading="lazy"
+          width={390}
+          height={240}
         />
       </div>
       <div className="card__content">
