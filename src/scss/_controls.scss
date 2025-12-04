@@ -1,0 +1,122 @@
+@use 'variables' as *;
+
+// Category Tabs
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 0.625vw, 12px);
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    gap: clamp(3px, 0.2vw, 4px);
+    padding: clamp(8px, 0.52vw, 10px) clamp(14px, 1.04vw, 20px);
+    border: 1px solid transparent;
+    border-radius: clamp(3px, 0.2vw, 4px);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: rgba($color-primary, 0.05);
+    }
+
+    &--active {
+      border-color: $color-primary;
+
+      .category-tabs__label,
+      .category-tabs__count {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__label {
+    font-size: clamp(14px, 0.83vw, 16px);
+    font-weight: 700;
+    line-height: 1.6;
+    color: $color-gray-600;
+  }
+
+  &__count {
+    font-size: clamp(8px, 0.52vw, 10px);
+    font-weight: 900;
+    line-height: 1.5;
+    color: $color-gray-600;
+  }
+}
+
+// Search Input
+.search-input {
+  position: relative;
+  width: clamp(200px, 16.4vw, 315px);
+
+  &__field {
+    width: 100%;
+    height: clamp(36px, 2.3vw, 44px);
+    padding: 0 clamp(36px, 2.5vw, 48px) 0 clamp(12px, 0.83vw, 16px);
+    border: 1px solid $color-gray-400;
+    border-radius: clamp(3px, 0.2vw, 4px);
+    background-color: $color-white;
+    font-size: clamp(12px, 0.73vw, 14px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color-gray-900;
+    outline: none;
+    transition: border-color 0.2s ease;
+
+    &::placeholder {
+      color: $color-gray-600;
+    }
+
+    &:focus {
+      border-color: $color-primary;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: clamp(12px, 0.83vw, 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-gray-600;
+    pointer-events: none;
+    width: clamp(14px, 0.83vw, 16px);
+    height: clamp(14px, 0.83vw, 16px);
+  }
+}
+
+// Load More Button
+.load-more {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 0.83vw, 16px);
+  padding: clamp(8px, 0.5vw, 10px) clamp(16px, 1vw, 20px);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &__icon {
+    width: clamp(20px, 1.25vw, 24px);
+    height: clamp(20px, 1.25vw, 24px);
+    color: $color-gray-800;
+  }
+
+  &__text {
+    font-size: clamp(14px, 0.83vw, 16px);
+    font-weight: 700;
+    line-height: 1.6;
+    color: $color-gray-800;
+  }
+}
+

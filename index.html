@@ -1,15 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Courses Catalog</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Courses Catalog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body>
+  <main class="course-catalog">
+    <!-- Header -->
+    <header class="header">
+      <div class="header__background">
+        <!-- Dots pattern (top right) -->
+        <svg class="header__dots" width="163" height="177" viewBox="0 0 163 177" fill="none" aria-hidden="true">
+          <circle cx="68" cy="17" r="3" fill="#FF3F3A"/>
+          <circle cx="77" cy="32" r="3" fill="#FF3F3A"/>
+          <circle cx="85" cy="47" r="3" fill="#FF3F3A"/>
+          <circle cx="94" cy="62" r="3" fill="#FF3F3A"/>
+          <circle cx="103" cy="77" r="3" fill="#FF3F3A"/>
+          <circle cx="111" cy="92" r="3" fill="#FF3F3A"/>
+          <circle cx="120" cy="107" r="3" fill="#FF3F3A"/>
+          <circle cx="128" cy="122" r="3" fill="#FF3F3A"/>
+          <circle cx="137" cy="137" r="3" fill="#FF3F3A"/>
+          <circle cx="56" cy="24" r="3" fill="#FF3F3A"/>
+          <circle cx="65" cy="39" r="3" fill="#FF3F3A"/>
+          <circle cx="73" cy="54" r="3" fill="#FF3F3A"/>
+          <circle cx="82" cy="69" r="3" fill="#FF3F3A"/>
+          <circle cx="90" cy="84" r="3" fill="#FF3F3A"/>
+          <circle cx="99" cy="99" r="3" fill="#FF3F3A"/>
+          <circle cx="108" cy="114" r="3" fill="#FF3F3A"/>
+          <circle cx="116" cy="129" r="3" fill="#FF3F3A"/>
+          <circle cx="125" cy="144" r="3" fill="#FF3F3A"/>
+          <circle cx="43" cy="31" r="3" fill="#FF3F3A"/>
+          <circle cx="52" cy="46" r="3" fill="#FF3F3A"/>
+          <circle cx="60" cy="61" r="3" fill="#FF3F3A"/>
+          <circle cx="69" cy="76" r="3" fill="#FF3F3A"/>
+          <circle cx="77" cy="91" r="3" fill="#FF3F3A"/>
+          <circle cx="86" cy="106" r="3" fill="#FF3F3A"/>
+          <circle cx="95" cy="121" r="3" fill="#FF3F3A"/>
+          <circle cx="103" cy="136" r="3" fill="#FF3F3A"/>
+          <circle cx="112" cy="151" r="3" fill="#FF3F3A"/>
+          <circle cx="31" cy="38" r="3" fill="#FF3F3A"/>
+          <circle cx="39" cy="53" r="3" fill="#FF3F3A"/>
+          <circle cx="48" cy="68" r="3" fill="#FF3F3A"/>
+          <circle cx="56" cy="83" r="3" fill="#FF3F3A"/>
+          <circle cx="65" cy="98" r="3" fill="#FF3F3A"/>
+          <circle cx="74" cy="113" r="3" fill="#FF3F3A"/>
+          <circle cx="82" cy="128" r="3" fill="#FF3F3A"/>
+          <circle cx="91" cy="143" r="3" fill="#FF3F3A"/>
+          <circle cx="99" cy="158" r="3" fill="#FF3F3A"/>
+          <circle cx="18" cy="45" r="3" fill="#FF3F3A"/>
+          <circle cx="27" cy="60" r="3" fill="#FF3F3A"/>
+          <circle cx="35" cy="75" r="3" fill="#FF3F3A"/>
+          <circle cx="44" cy="90" r="3" fill="#FF3F3A"/>
+          <circle cx="52" cy="105" r="3" fill="#FF3F3A"/>
+          <circle cx="61" cy="120" r="3" fill="#FF3F3A"/>
+          <circle cx="70" cy="135" r="3" fill="#FF3F3A"/>
+          <circle cx="78" cy="150" r="3" fill="#FF3F3A"/>
+          <circle cx="87" cy="165" r="3" fill="#FF3F3A"/>
+          <circle cx="6" cy="52" r="3" fill="#FF3F3A"/>
+          <circle cx="14" cy="67" r="3" fill="#FF3F3A"/>
+          <circle cx="23" cy="82" r="3" fill="#FF3F3A"/>
+          <circle cx="31" cy="97" r="3" fill="#FF3F3A"/>
+          <circle cx="40" cy="112" r="3" fill="#FF3F3A"/>
+          <circle cx="49" cy="127" r="3" fill="#FF3F3A"/>
+          <circle cx="57" cy="142" r="3" fill="#FF3F3A"/>
+          <circle cx="66" cy="157" r="3" fill="#FF3F3A"/>
+          <circle cx="74" cy="172" r="3" fill="#FF3F3A"/>
+          <circle cx="93" cy="3" r="3" fill="#FF3F3A"/>
+          <circle cx="102" cy="18" r="3" fill="#FF3F3A"/>
+          <circle cx="110" cy="33" r="3" fill="#FF3F3A"/>
+          <circle cx="119" cy="48" r="3" fill="#FF3F3A"/>
+          <circle cx="128" cy="63" r="3" fill="#FF3F3A"/>
+          <circle cx="136" cy="78" r="3" fill="#FF3F3A"/>
+          <circle cx="145" cy="93" r="3" fill="#FF3F3A"/>
+          <circle cx="153" cy="108" r="3" fill="#FF3F3A"/>
+          <circle cx="162" cy="123" r="3" fill="#FF3F3A"/>
+          <circle cx="81" cy="10" r="3" fill="#FF3F3A"/>
+          <circle cx="89" cy="25" r="3" fill="#FF3F3A"/>
+          <circle cx="98" cy="40" r="3" fill="#FF3F3A"/>
+          <circle cx="106" cy="55" r="3" fill="#FF3F3A"/>
+          <circle cx="115" cy="70" r="3" fill="#FF3F3A"/>
+          <circle cx="123" cy="85" r="3" fill="#FF3F3A"/>
+          <circle cx="132" cy="100" r="3" fill="#FF3F3A"/>
+          <circle cx="141" cy="115" r="3" fill="#FF3F3A"/>
+          <circle cx="149" cy="130" r="3" fill="#FF3F3A"/>
+        </svg>
+        <!-- Shapes (bottom right) -->
+        <svg class="header__shapes-right" width="85" height="85" viewBox="0 0 85 85" fill="none" aria-hidden="true">
+          <circle cx="71" cy="14" r="14" fill="#FFCF2D"/>
+          <circle cx="52" cy="33" r="14" fill="#FFCF2D"/>
+          <circle cx="33" cy="52" r="14" fill="#FFCF2D"/>
+          <circle cx="14" cy="71" r="14" fill="#FFCF2D"/>
+        </svg>
+        <!-- Shapes (left) -->
+        <svg class="header__shapes-left" width="83" height="44" viewBox="0 0 83 44" fill="none" aria-hidden="true">
+          <ellipse cx="66.5" cy="22" rx="22" ry="22" fill="#FF3F3A"/>
+          <ellipse cx="38" cy="22" rx="22" ry="22" fill="#FF3F3A"/>
+          <ellipse cx="9.5" cy="22" rx="22" ry="22" fill="#FF3F3A"/>
+        </svg>
+      </div>
+      <div class="header__content">
+        <span class="header__subtitle">Enjoy your studying!</span>
+        <h1 class="header__title">Our online courses</h1>
+      </div>
+    </header>
+
+    <!-- Controls -->
+    <section class="course-catalog__content">
+      <div class="course-catalog__controls">
+        <div class="category-tabs" role="tablist" aria-label="Course categories">
+          <!-- Tabs will be generated by JS -->
+        </div>
+        <div class="search-input">
+          <input type="text" class="search-input__field" placeholder="Search course..." id="searchInput">
+          <svg class="search-input__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 14L11.1 11.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Card Grid -->
+      <div class="card-grid" id="cardGrid">
+        <!-- Cards will be generated by JS -->
+      </div>
+
+      <!-- Load More -->
+      <div class="course-catalog__load-more" id="loadMoreWrapper">
+        <button class="load-more" id="loadMoreBtn" type="button">
+          <svg class="load-more__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 12L12 16L16 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 8V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="load-more__text">Load more</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="src/js/main.js"></script>
+</body>
 </html>
+
