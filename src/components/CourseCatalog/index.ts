@@ -1,0 +1,2 @@
+export { CourseCatalog } from './CourseCatalog';
+
